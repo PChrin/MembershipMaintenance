@@ -1,0 +1,20 @@
+﻿<Window x:Name="Add_Window" x:Class="MembershipMaintenance.View.AddView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MembershipMaintenance.View"
+        mc:Ignorable="d"
+        DataContext="{Binding Source={StaticResource Locator},Path=Add}"
+        Title="Add Membership"  Height="220" Width="340">
+    <Grid>
+        <TextBox Text="{Binding EnteredFName}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Margin="97,19,0,0"/>
+        <TextBox Text="{Binding EnteredLName}" HorizontalAlignment="Left" Height="23" Margin="97,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox Text="{Binding EnteredEmail}" HorizontalAlignment="Left" Height="23" Margin="97,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" RenderTransformOrigin="0.729,-0.119"/>
+        <Button Content="Save" Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=Add_Window}" HorizontalAlignment="Left" Margin="130,150,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Command ="{Binding CloseWindowCommand}" CommandParameter="{Binding ElementName= Add_Window}" HorizontalAlignment="Left" Margin="229,150,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.44,-1"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,19,0,0"/>
+        <Label Content="Last Name: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,56,0,0"/>
+        <Label Content="Email: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,100,0,0"/>
+    </Grid>
+</Window>
